@@ -88,7 +88,7 @@ def computeNeighbors (state):
 	if not moveLeft(state) == None:
 		neighbors.append(moveLeft(state))
 	return neighbors
-def goal(state):
+def isGoal(state):
 	checkState = copy.deepcopy(state)
 	x = flatten(checkState)
 	y = flatten(state)
@@ -107,7 +107,4 @@ def BFS(state):
 def main():
 	printer = LoadFromFile("testfile.txt")
 	deBugPrint(printer)
-	print (computeNeighbors(printer))
-	print (BFS(printer))
-	print (goal (printer))
 main()
